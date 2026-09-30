@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List Using jQuery</title>
+    <meta name="description" content="A beginner-friendly interactive to-do list built with HTML, CSS, JavaScript, and jQuery.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="todo-app">
+    <header>
+        <h1>To-Do List</h1>
+        <p class="subtitle">Assessment 1 Project</p>
+    </header>
+
+    <div class="controls-top">
+        <form id="add-task-form">
+            <input type="text" id="new-task-input" placeholder="What needs to be done?" autocomplete="off">
+            <button type="submit" id="add-task-btn">Add Task</button>
+        </form>
+        
+        <input type="text" id="search-input" placeholder="Search tasks..." autocomplete="off">
+    </div>
+
+    <div class="controls-mid">
+        <span id="task-counter">Total Tasks: 0</span>
+        <div class="actions">
+            <button id="toggle-tasks-btn" type="button">Hide Tasks</button>
+            <button id="clear-completed-btn" type="button">Clear Completed</button>
+        </div>
+    </div>
+
+    <div class="task-container">
+        <ul id="task-list">
+            <!-- Tasks will be appended here dynamically -->
+        </ul>
+        
+        <div id="empty-state" class="empty-message">
+            <p>No tasks yet. Add a task above!</p>
+        </div>
+        <div id="no-results-state" class="empty-message" style="display: none;">
+            <p>No tasks found matching your search.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built with HTML, CSS, JavaScript & jQuery</p>
+    </footer>
+</main>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
